@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JamReal Multi-Mode</title>
+  <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/css/style2.css"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+  <style type="text/css">
+    #analyser {
+      height: 220px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body id='solo-mode'>
+  <!-- <div class="extra"> -->
+        <div class="bg-3">
+          <h3>Jam<strong>Real</strong></h3>
+        </div>
+    <!--     WebSynthCtrl -->
+    <div class="synth container" ng-controller="WebSynthCtrl">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="col-lg-4 col-md-4 col-sm-4" id="midiInput">
+            <select ng-model="activeDevice" class="form-control" ng-options="device.manufacturer + ' ' + device.name for device in devices">
+              <option value="" disabled>Choose a MIDI device...</option>
+            </select>              
+           </div>
+ <!--        <div>-- Or -- <input type="button" id="keyDrum" onclick="keyDrum()"value="Keyboard Drum"></input></div> -->
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <button id="practiceRoom"><a href="/room">Enter Practice Room</a></button>
+      </div>
+      <div style="display:none" class="col-lg-6 col-md-6 col-sm-6">
+        <!-- frequency analyser goes here -->
+        <div class="panel panel-default">
+          <div class="panel-heading">Analyser</div>
+          <div class="panel-body">
+            <canvas ng-hide=true id="analyser"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- synth ctrl -->
+
+  <script src="/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="/vendors/angular/angular.min.js"></script>
+  <script src="/js/multi/buttonAudio.js"></script>
+  <script src="/js/multi/midi.js"></script>
+  <script src="/js/multi/analyser.js"></script>
+  <script src="/js/multi/audio.js"></script>
+  <script src="/js/multi/synth.js"></script>
+  <script src="/js/multi/app.js"></script>
+</body>
+</html>

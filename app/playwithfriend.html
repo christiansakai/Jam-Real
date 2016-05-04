@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JamReal Multi-Mode</title>
+  <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/css/style2.css"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+  <style type="text/css">
+    #analyser {
+      height: 220px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body id='multi-mode'>
+  <!-- <div class="extra"> -->
+        <div class="bg-3">
+          <h3>Jam<strong>Real</strong></h3>
+        </div>
+    <!--     WebSynthCtrl -->
+    <div class="synth container" ng-controller="WebSynthCtrl">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="col-lg-4 col-md-4 col-sm-4" id="midiInput">
+            <select ng-model="activeDevice" class="form-control" ng-options="device.manufacturer + ' ' + device.name for device in devices">
+              <option value="" disabled>Choose a MIDI device...</option>
+            </select>              
+           </div>
+        <div>-- Or -- <input type="button" id="keyDrum" onclick="keyDrum()"value="Keyboard Drum"></input></div>
+      </div>
+<!--       Peer1 -->
+      <div class="col-lg-6 col-md-6 col-sm-6">
+<!--         <button><a href="/room">Enter Room</a></button> -->
+        <!--         drum buttons -->
+ 
+        <input id="MyIdTxt" type="text" />&nbsp;&nbsp;
+        <input id="MyIdBtn" type="button" value="MY  ID" onclick="return MyIdBtn_onclick()" />
+        <div id="blueNote1"></div>
+        <div><img id="myImg" src='/myphoto/Cindy.png'></div>
+
+
+      </div>
+<!--       Peer2 -->
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <input id="PartnerIdTxt" type="text" />&nbsp;&nbsp;
+        <input id="PartnerIdBtn" type="button" value="FRIEND  ID" onclick="return PartnerIdBtn_onclick()" />
+        <div id="blueNote2"></div>
+        <div><img id="friendImg" src='/myphoto/Nate.png'></div>
+      </div> 
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <input type="button" id="toggleChat" onclick="toggleChatbox()"value="Chat here!"></input> 
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <textarea id="OutBox" rows="1" name="S1"></textarea>
+            <input id="sendBtn" type="button" value="SEND" onclick="return sendBtn_onclick()" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <textarea id="InBox" readonly="readonly" rows="1" name="S2"></textarea>
+          </div>
+          <input type="button" id="showPiano" onclick="pianoShow()"value="Start Playing!"></input> 
+        </div>
+
+          <div><img id="pianoImg" src="/images/futurepiano.jpg"></div>
+          <div id="content">
+            <div class="button" data-key="q" data-sound="https://dl.dropboxusercontent.com/s/h9sow482vkw06xe/dinky-kick.mp3"></div>
+            <div class="button" data-key="w" data-sound="https://dl.dropboxusercontent.com/s/kkikcupdg9n1qiy/dinky-snare.mp3"></div>
+            <div class="button" data-key="e" data-sound="https://dl.dropboxusercontent.com/s/d7jlxp5v4z0n62q/dinky-hat-2.mp3"></div>
+            <div class="button" data-key="r" data-sound="https://dl.dropboxusercontent.com/s/rblgnob6tvriudy/dinky-cym.mp3"></div>
+            <div class="button" data-key="t" data-sound="https://dl.dropboxusercontent.com/s/umm8cmrmn8n4a46/dinky-cym-noise.mp3"></div>
+          </div>
+
+        <!-- frequency analyser goes here -->
+        <div style="display:none" class="panel panel-default">
+          <!-- <div class="panel-heading">Analyser</div> -->
+          <div class="panel-body">
+            <canvas ng-hide=true id="analyser"></canvas>
+          </div>
+        </div>
+
+    </div> <!-- synth ctrl -->
+
+  <script src="/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="/vendors/angular/angular.min.js"></script>
+  <script src="/js/multi/buttonAudio.js"></script>
+  <script src="/js/multi/midi.js"></script>
+  <script src="/js/multi/analyser.js"></script>
+  <script src="/js/multi/audio.js"></script>
+  <script src="/js/multi/synth.js"></script>
+  <script src="/js/multi/app.js"></script>
+  <script type="text/javascript" src="http://cdn.peerjs.com/0.3/peer.js"></script>
+<!--         <script src="/js/three.min.js"></script>
+  <script src="/js/OrbitControls.js"></script> -->
+  <!-- <script src="/js/visualiser.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "JamReal",
+  "version": "1.0.0",
+  "description": "Virtual music playing experience",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cindyliu686/JamReal"
+  },
+  "keywords": [
+    "webaudio",
+    "peerJS",
+    "webVR"
+  ],
+  "author": "Cindy Liu",
+  "homepage": "https://github.com/cindyliu686/JamReal",
+  "dependencies": {
+    "express": "^4.10.4"
+  }
+}

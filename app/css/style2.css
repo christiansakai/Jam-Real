@@ -1,0 +1,250 @@
+2/*midi key board*/
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h4 {
+    margin: 0 0 5px 0;
+}
+p {
+    margin: 0 0 10px 0;
+}
+#content, #device_info {
+    max-width: 800px;
+    /*height: 125px;*/
+    margin: 0 auto;
+    padding: 10px 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1.5px;
+}
+#content, #key_data {
+    margin-top: 0px;
+    text-align: center;
+    display: none;
+}
+#inputs, #outputs {
+    display: inline-block;
+    width: 49%;
+    margin-top: 10px;
+    vertical-align: top;
+}
+#outputs {
+    text-align: right;
+}
+.info {
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px #ccc;
+    background-color: rgba(233, 233, 233, 0.25);
+}
+.small {
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+}
+p:not(.small) {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #00adef;
+    border-radius: 10px;
+    opacity: 1;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.2s;
+}
+.button.active {
+    background-color: #9a6aad;
+    opacity: 0.25;
+    box-shadow: inset 0px 0px 30px orange;
+    border: 2px solid rgba(100, 100, 100, 0.3);
+    animation: shake .2s ease-in-out;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+        transform: translateY(0);
+        transform: scale(1, 1);
+    }
+    20% {
+        transform: translateX(-10px);
+        transform: translateY(-100px);
+        transform: scale(0.5, 0.75);
+    }
+    40% {
+        transform: translateX(10px);
+        transform: translateY(0px);
+        transform: scale(1.5, 2);
+    }
+    60% {
+        transform: translateX(-10px);
+        transform: translateY(-50px);
+        transform: scale(0.5, 0.75);
+    }
+    80% {
+        transform: translateX(10px);
+        transform: translateY(50px);
+        transform: scale(1.3, 2);
+    }
+    100% {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+}
+
+/*peerJS*/
+#blueTop
+    {
+      font-weight: 600;
+      font-size: 18px;
+      background-color: #4dace2;
+      border: 1px solid #0C6BA1;
+      max-width: 600px;
+      width: 600px;
+    }
+    .warning
+    {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      font-size: 18px;
+    }
+    .browserinfo
+    {
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+    }
+    a
+    {
+      font-weight: 600;
+    }
+    #OutBox
+    {
+      height: 100px;
+      width: 200px;
+      border-radius: 5px;
+      background-color:#b4eeb4;
+      margin-left: 120px;
+      display: none;
+    }
+    #InBox
+    {
+      height: 100px;
+      width: 200px;
+      border-radius: 5px;
+      background-color:#cce5e5;
+      margin-left: 80px;
+      display: none;
+    }
+    #MyIdTxt
+    {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+    #PartnerIdTxt
+    {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+    #MyIdBtn
+    {
+      font-size: 12px;
+    }
+    #PartnerIdBtn
+    {
+      font-size: 12px;
+    }
+    #sendBtn
+    {
+      font-size: 12px;
+      display: none;
+    }
+/*welcome page*/
+#midiInput {
+    width: 20%;
+    margin-left:105px;
+    margin-bottom: 10px;
+}
+
+#MyIdTxt {
+    border-radius: 5px;
+    margin-left: 120px;
+}
+
+#PartnerIdTxt {
+    border-radius: 5px;
+    margin-left: 80px;
+}
+
+#blueNote1 {
+    margin-left: 120px;
+}
+
+#blueNote2 {
+    margin-left: 80px;
+}
+
+#toggleChat {
+    margin-top:10px;
+    margin-left:120px; 
+    margin-bottom:10px;
+    display:block; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px;
+}
+
+#showPiano {
+    margin-top:20px;
+    margin-left:120px; 
+    margin-bottom:10px;
+    font-family: Arial, Helvetica, sans-serif; 
+    display:block; 
+    font-size: 12px;
+}
+
+#keyDrum {
+    display: inline;
+}
+
+
+#pianoImg{
+    border-radius: 20px;
+    align: center;
+    margin-left: 140px;
+    display: none;
+}
+
+#myImg{
+    width:80px;
+    align: center;
+    margin-left: 120px;
+    display: none;
+}
+#friendImg{
+    width:130px;
+    align: center;
+    margin-left: 80px;
+    display: none;
+}
+
+#practiceRoom {
+  font-size: 18px;
+  margin-left:120px;
+}
+
+#multi-mode {
+  background-image: url("/images/Entertainment_AtlantisLive.jpg");
+}
+
+#solo-mode {
+  background-image: url("/images/solo.jpg");
+}
