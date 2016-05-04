@@ -9,16 +9,7 @@ JamReal aims to let people have live jamming experience wherever they are. It co
 
 ##Prerequisites##
  - Google Chrome 39 or above with #enable-web-midi flag activated
- - Some MIDI controller connected to your computer
-s
-##How To Use##
-
-    git clone https://github.com/cindyliu686/JamReal
-    cd JamReal/
-    npm i && bower i
-    npm start
-
-Go to [http://localhost:3000/](http://localhost:3000/)
+ - Some MIDI controller connected to your computers
 
 ##Resource##
 JamReal uses heavily several pre-built open source app and template as follow:  
